@@ -1,9 +1,10 @@
 html,
 body {
-  min-height: 100vh;
-  padding: 0;
-  margin: 0;
   font-family: system-ui, sans-serif;
+  line-height: 1.6;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
 }
 
 a {
@@ -13,4 +14,46 @@ a {
 
 * {
   box-sizing: border-box;
+}
+
+/*
+  Really lazy selectors here
+  @TODO: Proper BEM component for the table styling
+*/
+
+table span {
+  display: block;
+  font-size: .8em;
+}
+
+table span:first-of-type {
+  font-size: 1.1em;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+thead {
+  visibility: collapse;
+}
+
+th,
+td {
+  border-bottom: 1px solid;
+  padding: 1em;
+}
+
+th {
+  font-weight: normal;
+  text-align: left;
+}
+
+th span:first-child {
+  font-weight: bold;
+}
+
+td {
+  text-align: right;
 }

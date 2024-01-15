@@ -1,29 +1,25 @@
-# Redux Toolkit TypeScript Example
+# README
 
-This example shows how to integrate Next.js with [Redux Toolkit](https://redux-toolkit.js.org).
+## Setup instructions
 
-The **Redux Toolkit** is a standardized way to write Redux logic (create actions and reducers, setup the store with some default middlewares like redux devtools extension). This example demonstrates each of these features with Next.js
+Create a .env.local file containing `NEXT_PUBLIC_API_AUTH_TOKEN=` and then your auth token for the API
 
-## Deploy your own
+Get the project up and running (I'm using node v21.5.0):
 
-Deploy the example using [Vercel](https://vercel.com?utm_source=github&utm_medium=readme&utm_campaign=next-example):
-
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/vercel/next.js/tree/canary/examples/with-redux&project-name=with-redux&repository-name=with-redux)
-
-## How to use
-
-Execute [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) with [npm](https://docs.npmjs.com/cli/init), [Yarn](https://yarnpkg.com/lang/en/docs/cli/create/), or [pnpm](https://pnpm.io) to bootstrap the example:
-
-```bash
-npx create-next-app --example with-redux with-redux-app
+```
+npm instal
+npm run dev
 ```
 
-```bash
-yarn create next-app --example with-redux with-redux-app
-```
+Then open [http://localhost:3000](http://localhost:3000) in browser.
 
-```bash
-pnpm create next-app --example with-redux with-redux-app
-```
+## Design decisions
 
-Deploy it to the cloud with [Vercel](https://vercel.com/new?utm_source=github&utm_medium=readme&utm_campaign=next-example) ([Documentation](https://nextjs.org/docs/deployment)).
+* Using [Redux Toolkit](https://redux-toolkit.js.org/) for best practice [Redux](https://redux.js.org/) workflow.
+* Setup with a [Next.js](https://nextjs.org/) starter app including Redux Toolkit as it was the recommended quickstart and I didn't want to spend too long on setup. I haven't done anything server-specific.
+* I used [Normalizr](https://www.npmjs.com/package/normalizr) for processing nested data.
+* I used a `<table>` to represent what I saw as tabular data (neatly organised into columns). It provides good semantics to the user, though it may be something I pivoted away from when it came to design/interactivity. I've tried to consider good semantics and accessibility through, but it hasn't been the main focus.
+
+## Further extension
+
+I've used `@TODO` comments throughout explaining how I would extend code further / overcome its limitations.

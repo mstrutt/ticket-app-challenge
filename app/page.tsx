@@ -1,8 +1,8 @@
-/* Components */
-import { Counter } from './components/Counter/Counter'
+/* Core */
+import { Performance } from './components/Performance/Performance';
 
 export default function IndexPage() {
-  return <Counter />
+  return <Performance></Performance>
 }
 
 export const metadata = {
